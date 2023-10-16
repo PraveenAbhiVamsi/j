@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import ColorPicker from "./components/ColorPicker.js";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+const App = () => {
+  const colors = ["#FF5733", "#33FF57", "#5733FF", "#FFFF33"];
+
+  return (
+    <div className="app">
+      <ColorPicker colors={colors} />
+    </div>
+  );
+};
+
+export default App;
